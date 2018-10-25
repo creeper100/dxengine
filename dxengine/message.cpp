@@ -1,3 +1,4 @@
+#pragma once
 #include "stdafx.h"
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {

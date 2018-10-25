@@ -1,8 +1,8 @@
 #pragma once
-class GameWindowClass
-{
-private:
+class GameWindowClass{
+protected:
 	HINSTANCE hInst;
+	HWND hWnd;
 public:
 	GameWindowClass(HINSTANCE hInstan, int nCmdShow);
 	ATOM  MyRegisterClass(HINSTANCE hInstance);

@@ -32,7 +32,7 @@ ATOM GameWindowClass::MyRegisterClass(HINSTANCE hInstance) {
 BOOL GameWindowClass::InitInstance(HINSTANCE hInstance,int cmd){
 	hInst = hInstance;
 
-	HWND hWnd = CreateWindowW(L"w1", L"game", WS_OVERLAPPEDWINDOW,
+	hWnd = CreateWindowW(L"w1", L"game", WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
 	if (!hWnd)
