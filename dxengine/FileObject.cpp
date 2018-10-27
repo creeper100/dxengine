@@ -25,3 +25,10 @@ HRESULT FileObject::Load(LPDIRECT3DDEVICE9 pDirect3Device,LPCWSTR name) {
 	pMeshBuffer->Release();
 	return S_OK;
 }
+void FileObject::draw(LPDIRECT3DDEVICE9 pDirect3Device){
+	for (DWORD i = 0; i < dwNumber; i++) {
+		pDirect3Device->SetMaterial(&pMeshMaterial[i]);
+		pDirect3Device->SetTexture(0, pMeshTextura[i]);
+		pMesh->DrawSubset(i);
+	}
+}

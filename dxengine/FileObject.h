@@ -11,6 +11,7 @@ public:
 
 	FileObject();
 	HRESULT Load(LPDIRECT3DDEVICE9 pDirect3Device, LPCWSTR name);
+	void draw(LPDIRECT3DDEVICE9 pDirect3Device);
 	~FileObject();
 };
 

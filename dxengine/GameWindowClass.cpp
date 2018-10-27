@@ -2,7 +2,7 @@
 #include "GameWindowClass.h"
 #include "message.h"
 
-GameWindowClass::GameWindowClass(HINSTANCE hInstan,int nCmdShow)
+void GameWindowClass::init(HINSTANCE hInstan,int nCmdShow)
 {
 	hInst = hInstan;
 	MyRegisterClass(hInst);

@@ -1,15 +1,14 @@
 #pragma once
 #include "stdafx.h"
+#include "dxengine.h"
+extern DxGameClass mwnd;
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	switch (message)
 	{
 	case WM_PAINT:
 	{
-		PAINTSTRUCT ps;
-		HDC hdc = BeginPaint(hWnd, &ps);
-		// TODO: Добавьте сюда любой код прорисовки, использующий HDC...
-		EndPaint(hWnd, &ps);
+		mwnd.render();
 	}
 	break;
 	case WM_DESTROY:

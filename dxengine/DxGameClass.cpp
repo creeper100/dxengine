@@ -20,20 +20,20 @@ HRESULT DxGameClass :: InitalDirect3D(HWND hwnd) {
 	pDirect3Device->SetRenderState(D3DRS_AMBIENT, 0xffffffff);
 	return S_OK;
 }
-HRESULT DxGameClass::InitalMesh() {
-	/*
-	D3DXLoadMeshFromX(L"tiger.x", D3DXMESH_SYSTEMMEM, pDirect3Device, NULL, &pMeshBuffer, NULL, &dwNumber, &pMesh);
-	D3DXMATERIAL* D3DXMeshMaterials = (D3DXMATERIAL *)pMeshBuffer->GetBufferPointer();
-	pMeshMaterial = new D3DMATERIAL9[dwNumber];
-	pMeshTextura = new LPDIRECT3DTEXTURE9[dwNumber];
-	for (DWORD i = 0;i < dwNumber;i++) {
-		pMeshMaterial[i] = D3DXMeshMaterials[i].MatD3D;
-		pMeshMaterial[i].Ambient = pMeshMaterial[i].Diffuse;
-		if (FAILED(D3DXCreateTextureFromFileA(pDirect3Device, D3DXMeshMaterials[i].pTextureFilename, &pMeshTextura[i])))
-			pMeshTextura[i] = NULL;
+
+void DxGameClass::Init(HINSTANCE hInstan, int nCmdShow) {
+	init( hInstan,  nCmdShow);
+	if (FAILED(InitalDirect3D(hWnd)))
+		exit(556);
+	FileObject model;
+	if (FAILED(model.Load(pDirect3Device, L"tiger.x")))
+		exit(9);
+}
+void DxGameClass::render() {
+	if (pDirect3Device != NULL) {
+		pDirect3Device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);
+		pDirect3Device->BeginScene();
+		pDirect3Device->EndScene();
+		pDirect3Device->Present(NULL, NULL, NULL, NULL);
 	}
-	pMeshBuffer->Release();
-	*/
-	return S_OK;
-	
 }
