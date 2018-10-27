@@ -20,3 +20,20 @@ HRESULT DxGameClass :: InitalDirect3D(HWND hwnd) {
 	pDirect3Device->SetRenderState(D3DRS_AMBIENT, 0xffffffff);
 	return S_OK;
 }
+HRESULT DxGameClass::InitalMesh() {
+	/*
+	D3DXLoadMeshFromX(L"tiger.x", D3DXMESH_SYSTEMMEM, pDirect3Device, NULL, &pMeshBuffer, NULL, &dwNumber, &pMesh);
+	D3DXMATERIAL* D3DXMeshMaterials = (D3DXMATERIAL *)pMeshBuffer->GetBufferPointer();
+	pMeshMaterial = new D3DMATERIAL9[dwNumber];
+	pMeshTextura = new LPDIRECT3DTEXTURE9[dwNumber];
+	for (DWORD i = 0;i < dwNumber;i++) {
+		pMeshMaterial[i] = D3DXMeshMaterials[i].MatD3D;
+		pMeshMaterial[i].Ambient = pMeshMaterial[i].Diffuse;
+		if (FAILED(D3DXCreateTextureFromFileA(pDirect3Device, D3DXMeshMaterials[i].pTextureFilename, &pMeshTextura[i])))
+			pMeshTextura[i] = NULL;
+	}
+	pMeshBuffer->Release();
+	*/
+	return S_OK;
+	
+}
