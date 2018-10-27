@@ -8,6 +8,8 @@ class DxGameClass :
 private:
 LPDIRECT3D9 pDirect3D;
 LPDIRECT3DDEVICE9  pDirect3Device;
+std::vector<FileObject> modelFiles;
+int files = 0;
 
 public:
 	void Init(HINSTANCE hInstan, int nCmdShow);
@@ -16,5 +18,6 @@ public:
 		return pDirect3Device;
 	}
 	void render();
+	HRESULT loadFile(LPCWSTR loadstr);
 };
 

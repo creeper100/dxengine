@@ -1,2 +1,7 @@
 ﻿  DxGameClass.cpp
-  dxengine.vcxproj -> C:\Users\dimko\source\repos\dxengine\Debug\dxengine.exe
+c:\users\dimko\source\repos\dxengine\dxengine\dxgameclass.cpp(43): error C2664: "std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> std::vector<_Ty,std::allocator<_Ty>>::insert(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::initializer_list<_Ty>)": невозможно преобразовать аргумент 1 из "int" в "std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>"
+          with
+          [
+              _Ty=FileObject
+          ]
+  c:\users\dimko\source\repos\dxengine\dxengine\dxgameclass.cpp(43): note: Ни один конструктор не смог принять исходный тип, либо разрешение перегрузки конструктора неоднозначно

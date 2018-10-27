@@ -25,15 +25,24 @@ void DxGameClass::Init(HINSTANCE hInstan, int nCmdShow) {
 	init( hInstan,  nCmdShow);
 	if (FAILED(InitalDirect3D(hWnd)))
 		exit(556);
-	FileObject model;
-	if (FAILED(model.Load(pDirect3Device, L"tiger.x")))
-		exit(9);
+	if (FAILED(loadFile(L"tider.h")))
+		exit(234);
 }
 void DxGameClass::render() {
 	if (pDirect3Device != NULL) {
 		pDirect3Device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);
 		pDirect3Device->BeginScene();
+		for (int i = 0;i < files;i++) {
+			modelFiles[i].draw(pDirect3Device);
+		}
 		pDirect3Device->EndScene();
 		pDirect3Device->Present(NULL, NULL, NULL, NULL);
 	}
+}
+HRESULT DxGameClass::loadFile(LPCWSTR loadstr) {
+	modelFiles.insert(0,files);
+	if (FAILED(modelFiles[files].Load(pDirect3Device, loadstr)))
+		return E_FAIL;
+		files++;
+		return S_OK;
 }
