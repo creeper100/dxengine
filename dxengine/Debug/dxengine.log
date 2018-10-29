@@ -1,3 +1,2 @@
-﻿  Camera.cpp
-c:\users\dimko\source\repos\dxengine\dxengine\camera.cpp(20): warning C4244: аргумент: преобразование "double" в "FLOAT", возможна потеря данных
+﻿  Light.cpp
   dxengine.vcxproj -> C:\Users\dimko\source\repos\dxengine\Debug\dxengine.exe

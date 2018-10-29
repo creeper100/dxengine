@@ -8,6 +8,7 @@ private:
 public:
 	Camera(double x, double y, double z, LPDIRECT3DDEVICE9 pDev);
 	void LookAt(double x, double y, double z);
+	void move(double x, double y, double z);
 	~Camera();
 };
 
