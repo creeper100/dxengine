@@ -19,5 +19,6 @@ public:
 	}
 	void render();
 	HRESULT loadFile(LPCWSTR loadstr);
+
 };
 

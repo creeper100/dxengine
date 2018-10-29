@@ -149,6 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="dxengine.h" />
     <ClInclude Include="DxGameClass.h" />
     <ClInclude Include="FileObject.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="dxengine.cpp" />
     <ClCompile Include="DxGameClass.cpp" />
     <ClCompile Include="FileObject.cpp" />

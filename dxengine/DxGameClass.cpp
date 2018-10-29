@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "DxGameClass.h"
+#include "Camera.h"
 HRESULT DxGameClass :: InitalDirect3D(HWND hwnd) {
 	if (NULL == (pDirect3D = Direct3DCreate9(D3D_SDK_VERSION)))
 		return E_FAIL;
@@ -25,8 +26,10 @@ void DxGameClass::Init(HINSTANCE hInstan, int nCmdShow) {
 	init( hInstan,  nCmdShow);
 	if (FAILED(InitalDirect3D(hWnd)))
 		exit(556);
-	if (FAILED(loadFile(L"tider.h")))
+	if (FAILED(loadFile(L"tiger.x")))
 		exit(234);
+	Camera cam(0.0f, 0.0f, 2.0f, pDirect3Device);
+	cam.LookAt(0, 0, 0);
 }
 void DxGameClass::render() {
 	if (pDirect3Device != NULL) {
@@ -40,9 +43,10 @@ void DxGameClass::render() {
 	}
 }
 HRESULT DxGameClass::loadFile(LPCWSTR loadstr) {
-	modelFiles.insert(0,files);
-	if (FAILED(modelFiles[files].Load(pDirect3Device, loadstr)))
+	FileObject lf;
+	if (FAILED(lf.Load(pDirect3Device, loadstr)))
 		return E_FAIL;
+	modelFiles.push_back(lf);
 		files++;
 		return S_OK;
 }
