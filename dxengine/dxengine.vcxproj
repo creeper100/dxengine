@@ -154,6 +154,7 @@
     <ClInclude Include="DxGameClass.h" />
     <ClInclude Include="FileObject.h" />
     <ClInclude Include="GameWindowClass.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="message.h" />
     <ClInclude Include="stdafx.h" />
@@ -165,6 +166,7 @@
     <ClCompile Include="DxGameClass.cpp" />
     <ClCompile Include="FileObject.cpp" />
     <ClCompile Include="GameWindowClass.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="message.cpp" />
     <ClCompile Include="stdafx.cpp">

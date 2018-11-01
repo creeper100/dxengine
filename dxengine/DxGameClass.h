@@ -2,6 +2,7 @@
 #include "GameWindowClass.h"
 #include <vector>
 #include "FileObject.h"
+
 class DxGameClass :
 	public GameWindowClass
 {
@@ -10,7 +11,7 @@ LPDIRECT3D9 pDirect3D;
 LPDIRECT3DDEVICE9  pDirect3Device;
 std::vector<FileObject> modelFiles;
 int files = 0;
-
+HINSTANCE hInst;
 public:
 	void Init(HINSTANCE hInstan, int nCmdShow);
 	HRESULT InitalDirect3D(HWND hwnd);
