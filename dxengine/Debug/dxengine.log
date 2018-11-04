@@ -1,5 +1,6 @@
 ﻿  DxGameClass.cpp
   Input.cpp
-c:\users\dimko\source\repos\dxengine\dxengine\input.cpp(15): warning C4101: hr: неиспользованная локальная переменная
+  dxengine.cpp
+  message.cpp
   Создание кода...
   dxengine.vcxproj -> C:\Users\dimko\source\repos\dxengine\Debug\dxengine.exe

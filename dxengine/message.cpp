@@ -2,12 +2,18 @@
 #include "stdafx.h"
 #include "dxengine.h"
 extern DxGameClass mwnd;
+Input inp;
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	switch (message)
 	{
+	case WM_CREATE:
+		break;
 	case WM_PAINT:
 	{
+		if(inp.isinital())
+		inp.InitialInput(mwnd.getInst(), hWnd, mwnd.getDevice());
+		inp.readinput();
 		mwnd.render();
 	}
 	break;

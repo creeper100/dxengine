@@ -38,8 +38,6 @@ void DxGameClass::Init(HINSTANCE hInstan, int nCmdShow) {
 	//Light flash(D3DLIGHT_SPOT, 1.0f, 1.0f, 1.0f,10.0f, D3DXVECTOR3(0.0f, 0.0f, -3.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), pDirect3Device);
 }
 void DxGameClass::render() {
-	Input inp;
-	inp.InitialInput(hInst, hWnd, pDirect3Device);
 	if (pDirect3Device != NULL) {
 		pDirect3Device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);
 		pDirect3Device->BeginScene();
