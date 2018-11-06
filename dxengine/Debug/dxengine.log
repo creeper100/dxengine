@@ -1,6 +1,2 @@
-﻿  DxGameClass.cpp
-  Input.cpp
-  dxengine.cpp
-  message.cpp
-  Создание кода...
+﻿  Player.cpp
   dxengine.vcxproj -> C:\Users\dimko\source\repos\dxengine\Debug\dxengine.exe

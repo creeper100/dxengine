@@ -33,8 +33,6 @@ void DxGameClass::Init(HINSTANCE hInstan, int nCmdShow) {
 		exit(556);
 	if (FAILED(loadFile(L"tiger.x")))
 		exit(234);
-	Camera cam(0.0f, 0.0f, -1.5f, pDirect3Device);
-	cam.LookAt(0, 0, 0);
 	//Light flash(D3DLIGHT_SPOT, 1.0f, 1.0f, 1.0f,10.0f, D3DXVECTOR3(0.0f, 0.0f, -3.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), pDirect3Device);
 }
 void DxGameClass::render() {
