@@ -2,7 +2,6 @@
 class Camera
 {
 private:
-	D3DXMATRIX MatrixView;
 	double cx, cy, cz;
 	double lx, ly, lz;
 	LPDIRECT3DDEVICE9 pDD;

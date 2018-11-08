@@ -8,11 +8,14 @@ class Player
 
 public:
 	Player(LPDIRECT3DDEVICE9 pDirect3Device);
+	void init(LPDIRECT3DDEVICE9 pDirect3Device);
+	Player();
 	~Player();
 	void forward(double val);
 	void left(double val);
 	void right(double val);
 	void backward(double val);
 	void move(double x, double y, double z);
+	void rotate(double rx, double ry);
 };
 

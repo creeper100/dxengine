@@ -1,7 +1,9 @@
 #include "stdafx.h"
 #include "Input.h"
+#include "DxGameClass.h"
 
 #define  KEYDOWN(name,key)(name[key] &0x80)
+extern DxGameClass mwnd;
 Input::Input()
 {
 }
@@ -46,24 +48,24 @@ void Input::readinput() {
 	// Изменяем окружающие освещенние на зеленный цвет
 	if (KEYDOWN(keyboard, DIK_LEFT))
 	{
-		pDD->SetRenderState(D3DRS_AMBIENT, 0xf0ff00f);
+		mwnd.pla.left(0.1);
 	}
 	// Обработка клавиши < RIGHT >
 	// Возвращаем в исходное состояние
 	if (KEYDOWN(keyboard, DIK_RIGHT))
 	{
-		pDD->SetRenderState(D3DRS_AMBIENT, 0xffffffff);
+		mwnd.pla.right(0.1);
 	}
 	// Обработка клавиши < Up >
 	// Изменяем окружающие освещенние на синий цвет
 	if (KEYDOWN(keyboard, DIK_UP))
 	{
-		pDD->SetRenderState(D3DRS_AMBIENT, 0x00000ff);
+		mwnd.pla.forward(0.1);
 	}
 	// Обработка клавиши < Down >
 	// Изменяем окружающие освещенние на красный цвет
 	if (KEYDOWN(keyboard, DIK_DOWN))
 	{
-		pDD->SetRenderState(D3DRS_AMBIENT, 0x00ff00ff);
+		mwnd.pla.backward(0.1);
 	}
 }
