@@ -3,6 +3,7 @@
 class Player
 {
 	double x, y, z;
+	double tgor, tvert;
 	Camera cam;
 	LPDIRECT3DDEVICE9 pDD;
 

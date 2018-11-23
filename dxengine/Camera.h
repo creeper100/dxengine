@@ -12,6 +12,7 @@ public:
 	Camera();
 	void LookAt(double x, double y, double z);
 	void move(double x, double y, double z);
+	void LookDeg(double rx, double ry);
 	~Camera();
 };
 

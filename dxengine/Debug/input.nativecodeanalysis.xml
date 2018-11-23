@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\dimko\source\repos\dxengine\dxengine\</FILEPATH>
+      <FILENAME>input.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Input::pInput' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Input::{ctor}</FUNCTION>
+    <DECORATED>??0Input@@QAE@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\dimko\source\repos\dxengine\dxengine\</FILEPATH>
+      <FILENAME>input.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Input::pInputDevice' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Input::{ctor}</FUNCTION>
+    <DECORATED>??0Input@@QAE@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\dimko\source\repos\dxengine\dxengine\</FILEPATH>
+      <FILENAME>input.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Input::pDD' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Input::{ctor}</FUNCTION>
+    <DECORATED>??0Input@@QAE@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

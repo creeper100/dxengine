@@ -44,28 +44,23 @@ void Input::readinput() {
 	pInputDevice->GetDeviceState(sizeof(keyboard), (LPVOID)&keyboard);
 	if (KEYDOWN(keyboard, DIK_ESCAPE))
 		PostQuitMessage(0);
-	// Обработка клавиши < LEFT >
-	// Изменяем окружающие освещенние на зеленный цвет
-	if (KEYDOWN(keyboard, DIK_LEFT))
-	{
+	if (KEYDOWN(keyboard, DIK_LEFT)){
 		mwnd.pla.left(0.1);
 	}
-	// Обработка клавиши < RIGHT >
-	// Возвращаем в исходное состояние
-	if (KEYDOWN(keyboard, DIK_RIGHT))
-	{
+	if (KEYDOWN(keyboard, DIK_RIGHT)){
 		mwnd.pla.right(0.1);
 	}
-	// Обработка клавиши < Up >
-	// Изменяем окружающие освещенние на синий цвет
 	if (KEYDOWN(keyboard, DIK_UP))
 	{
 		mwnd.pla.forward(0.1);
 	}
-	// Обработка клавиши < Down >
-	// Изменяем окружающие освещенние на красный цвет
-	if (KEYDOWN(keyboard, DIK_DOWN))
-	{
+	if (KEYDOWN(keyboard, DIK_DOWN)){
 		mwnd.pla.backward(0.1);
+	}
+	if (KEYDOWN(keyboard, DIK_Q)){
+		mwnd.pla.rotate(-1,0);
+	}
+	if (KEYDOWN(keyboard, DIK_E)){
+		mwnd.pla.rotate(1,0);
 	}
 }

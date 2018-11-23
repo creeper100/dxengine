@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\dimko\source\repos\dxengine\dxengine\</FILEPATH>
+      <FILENAME>dxgameclass.h</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'DxGameClass::pDirect3Device' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>DxGameClass::{ctor}</FUNCTION>
+    <DECORATED>??0DxGameClass@@QAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\dimko\source\repos\dxengine\dxengine\</FILEPATH>
+      <FILENAME>dxgameclass.h</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'DxGameClass::pDirect3D' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>DxGameClass::{ctor}</FUNCTION>
+    <DECORATED>??0DxGameClass@@QAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

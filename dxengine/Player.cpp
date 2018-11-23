@@ -9,7 +9,9 @@ Player::Player(LPDIRECT3DDEVICE9 pDirect3Device)
 Player::Player() {}
 void Player::init(LPDIRECT3DDEVICE9 pDirect3Device){
 	pDD = pDirect3Device;
-	cam.init(0.0f, 0.0f, -1.5f, 0.0f, 0.0f, 1.0f, pDirect3Device);
+	x = y = z = 0;
+	tgor = tvert = 0;
+	cam.init(0.0f, 0.0f, -1.5f, 0.0f, 0.0f, -0.5f, pDirect3Device);
 }
 Player::~Player()
 {
@@ -35,6 +37,9 @@ void Player::move(double xm, double ym , double zm) {
 	cam.Lookmove(xm, ym, zm);
 }
 void Player::rotate(double rx, double ry) {
-	cam.Lookmove(sin(rx* 3.14159265 / 180) * 8.0f, cos(rx* 3.14159265 / 180) * 8.0f, 0);
+	tgor += rx;
+	//if (tgor >= 360)
+		//tgor = 0;
+	cam.LookDeg(tgor, ry);
 }
 

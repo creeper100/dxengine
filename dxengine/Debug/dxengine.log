@@ -1,2 +1,6 @@
-﻿  Player.cpp
+﻿  Camera.cpp
+c:\users\dimko\source\repos\dxengine\dxengine\camera.cpp(16): warning C4244: аргумент: преобразование "double" в "FLOAT", возможна потеря данных
+c:\users\dimko\source\repos\dxengine\dxengine\camera.cpp(32): warning C4244: аргумент: преобразование "double" в "FLOAT", возможна потеря данных
+c:\users\dimko\source\repos\dxengine\dxengine\camera.cpp(41): warning C4244: аргумент: преобразование "double" в "FLOAT", возможна потеря данных
+c:\users\dimko\source\repos\dxengine\dxengine\camera.cpp(52): warning C4244: аргумент: преобразование "double" в "FLOAT", возможна потеря данных
   dxengine.vcxproj -> C:\Users\dimko\source\repos\dxengine\Debug\dxengine.exe

@@ -29,7 +29,7 @@ void Camera::LookAt(double x, double y, double z) {
 	ly = y;
 	lz = z;
 	
-	D3DXMatrixLookAtLH(&MatrixView, &D3DXVECTOR3(cx, cy, cz), &D3DXVECTOR3(x, y, z), &D3DXVECTOR3(0.0f, 1.0f, 0.0));
+	D3DXMatrixLookAtLH(&MatrixView, &D3DXVECTOR3(cx, cy, cz), &D3DXVECTOR3(lx, ly, lz), &D3DXVECTOR3(0.0f, 1.0f, 0.0));
 	pDD->SetTransform(D3DTS_VIEW, &MatrixView);
 }
 void Camera::Lookmove(double x, double y, double z) {
@@ -40,6 +40,9 @@ void Camera::Lookmove(double x, double y, double z) {
 	//D3DXMatrixLookAtLH(&MatrixView, &D3DXVECTOR3(0.0f, 0.0f, -8.0), &D3DXVECTOR3(0.0f, 0.0f, 0.0), &D3DXVECTOR3(0.0f, 1.0f, 0.0));
 	D3DXMatrixLookAtLH(&MatrixView, &D3DXVECTOR3(cx, cy, cz), &D3DXVECTOR3(lx, ly, lz), &D3DXVECTOR3(0.0f, 1.0f, 0.0));
 	pDD->SetTransform(D3DTS_VIEW, &MatrixView);
+}
+void Camera::LookDeg(double rx, double ry) {
+	LookAt(sin(rx* 3.14159265 / 180)+cx, 0+cy, cos(rx* 3.14159265 / 180)+cz);
 }
 void Camera::move(double x, double y, double z) {
 	D3DXMATRIX MatrixView;
